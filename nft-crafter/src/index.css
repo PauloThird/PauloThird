@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  body {
+    @apply bg-dark-bg text-white antialiased;
+  }
+}
+
+@layer components {
+  .neon-glow {
+    filter: drop-shadow(0 0 5px currentColor) drop-shadow(0 0 10px currentColor);
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-sm bg-white/5 border border-white/10;
+  }
+  
+  .btn-neon {
+    @apply relative overflow-hidden bg-neon-gradient text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;
+  }
+  
+  .btn-neon:before {
+    content: '';
+    @apply absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full transition-transform duration-700;
+  }
+  
+  .btn-neon:hover:before {
+    @apply translate-x-full;
+  }
+}
