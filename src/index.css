@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  @apply bg-matteBlack text-white;
+  background-image: radial-gradient(circle at 50% 50%, rgba(78, 0, 224, 0.15), transparent 60%);
+}
+
+.neon-gradient-bg {
+  background: linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%);
+}
